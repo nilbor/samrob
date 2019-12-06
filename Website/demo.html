@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <title>Car go vroom vroom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="demo.js" type="text/javascript"></script>
+  </head>
+   <body onload="drawCharts()" >
+      <div class="wrapper">
+         <h1>Zoom Wroom</h1>
+         <form id="connection-info-form">
+          <input type="button" onclick="startConnect()" value="Connect" id="Connect"> <!--skapar två klickbara knappar som runnar funktioner när man klickar på dem-->
+          <input type="button" onclick="startDisconnect()" value="Disconnect" id="Disconnect"><br>
+          <input type="button" onclick="onOff()" value="On/Off"id="OnOff"><br>
+         <p id="adamtx">Adam </p>
+         <input type="text" readonly id="adam" value="0">
+         <p id="cm1">cm/s </p>
+         <p id="börtx">Moving Towards </p> 
+         <input type="text" readonly id="bör" value="0">
+         <p id="cm2">cm/s </p>
+         <p id="nilstx">Nils </p>
+         <input type="text" readonly id="nils" value="0">
+         <p id="cm3">cm/s </p>
+         </form>
+      <div id = "limit">
+      <div id="chart1"> </div>
+      <div id="chart2"> </div>
+      <div class="slidecontainer">
+         <input type="range" min="0" max="60" value="30" class="slider" id="myRange" oninput="slide()">
+         <p id="speedtx">Speed:</p>
+         <p id="cmS">cm/s</p>
+         <input id ="speed" type="number" value="30" class="speed" min="0" max="60" oninput="typer()">
+         <input type="button" onclick="send()" value="Apply" id = "Apply">
+      </div>
+      <div id="messages"></div>
+      
+   </body> 
+
+   
+   
+</html>
