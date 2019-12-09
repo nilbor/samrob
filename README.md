@@ -5,6 +5,8 @@ Website(Nils):
 
 http://cargovroomvroom.se.s3-website.eu-north-1.amazonaws.com/
 
+Speed Measurment(Adam)
+
 Contol(Proportional Term: Adam, Integrating Term: Both)
 
 
